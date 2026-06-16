@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>⚡ QK3M4 | CHEAT MASTER ⚡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(ellipse at center, #0a0f1e 0%, #05070f 100%);
+            font-family: 'Courier New', 'SF Mono', 'Fira Code', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* HACKER GLASS CONTAINER */
+        .glass-panel {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(10, 20, 30, 0.75);
+            backdrop-filter: blur(15px);
+            border-radius: 48px;
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.2), inset 0 0 20px rgba(0, 255, 255, 0.05);
+            padding: 24px 20px 32px;
+            transition: all 0.3s ease;
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .glitch {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #0ff;
+            text-shadow: 0.05em 0 0 rgba(255,0,0,0.5), -0.05em -0.025em 0 rgba(0,255,0,0.5);
+            animation: glitch-shake 0.3s infinite alternate;
+            letter-spacing: 2px;
+        }
+
+        @keyframes glitch-shake {
+            0% { transform: translate(0); text-shadow: 2px 0 red; }
+            100% { transform: translate(-1px, 1px); text-shadow: -2px 0 cyan; }
+        }
+
+        .badge {
+            display: inline-block;
+            background: #0ff10f20;
+            border: 1px solid #0f0;
+            border-radius: 60px;
+            padding: 6px 14px;
+            margin-top: 12px;
+            font-size: 11px;
+            color: #0f0;
+            font-weight: bold;
+            backdrop-filter: blur(4px);
+        }
+
+        .zalo {
+            color: #ffaa00;
+            font-size: 13px;
+            margin-top: 8px;
+            display: block;
+        }
+
+        /* KEY SECTION */
+        .key-section {
+            background: #010a0fcc;
+            border-radius: 32px;
+            padding: 20px 16px;
+            margin-bottom: 24px;
+            border: 1px solid #0ff;
+            box-shadow: 0 0 12px #0ff2;
+        }
+
+        .key-title {
+            color: #0ff;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        .key-input-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .key-input-group input {
+            flex: 1;
+            background: #001d2a;
+            border: 1px solid #0ff;
+            border-radius: 60px;
+            padding: 14px 18px;
+            color: #0ff;
+            font-family: monospace;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            outline: none;
+            letter-spacing: 1px;
+        }
+
+        .key-input-group input::placeholder {
+            color: #0ff5;
+            font-size: 12px;
+        }
+
+        .btn-key {
+            background: linear-gradient(95deg, #0ff, #0a8);
+            border: none;
+            border-radius: 60px;
+            padding: 0 28px;
+            font-weight: bold;
+            color: #010a0f;
+            font-family: monospace;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 0 8px cyan;
+        }
+
+        .btn-key:active {
+            transform: scale(0.96);
+        }
+
+        /* STATUS MSG */
+        .status {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 28px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            background: #021018;
+            border-left: 4px solid cyan;
+            color: #0ff;
+        }
+
+        /* CHEAT LIST */
+        .cheat-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 28px 0;
+        }
+
+        .cheat-item {
+            background: #00000066;
+            border-radius: 60px;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #0ff3;
+            transition: 0.2s;
+        }
+
+        .cheat-name {
+            font-weight: bold;
+            color: #bfefff;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cheat-name:before {
+            content: "⚡";
+            color: cyan;
+            font-size: 16px;
+        }
+
+        .toggle {
+            width: 52px;
+            height: 28px;
+            background: #1e2a36;
+            border-radius: 40px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.2s;
+            border: 1px solid cyan;
+        }
+
+        .toggle.active {
+            background: #0ff;
+            box-shadow: 0 0 12px cyan;
+        }
+
+        .toggle.active:after {
+            left: 26px;
+            background: #010101;
+        }
+
+        .toggle:after {
+            content: "";
+            width: 22px;
+            height: 22px;
+            background: #7f8c8d;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 3px;
+            transition: 0.2s;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            color: #0ff6;
+            margin-top: 22px;
+            border-top: 1px dashed #0ff3;
+            padding-top: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="glass-panel" id="app">
+    <div class="header">
+        <div class="glitch">◤ QK3M4 AIO ◢</div>
+        <div class="badge">🔥 ROOT | JAILBREAK | NO BAN 🔥</div>
+        <div class="zalo">📱 ZALO: 0919919191 | QUANGKHAI 3M4</div>
+    </div>
+
+    <div class="key-section" id="keySection">
+        <div class="key-title">🔐 XÁC THỰC TRUY CẬP</div>
+        <div class="key-input-group">
+            <input type="text" id="licenseKey" placeholder="NHẬP KEY KÍCH HOẠT" autocomplete="off">
+            <button class="btn-key" id="submitKey">KÍCH HOẠT</button>
+        </div>
+        <div class="status" id="statusMsg">⚡ NHẬP KEY ĐỂ GIẢI PHÓNG SỨC MẠNH ⚡</div>
+    </div>
+
+    <div id="cheatPanel" style="display: none;">
+        <div class="cheat-list">
+            <div class="cheat-item">
+                <span class="cheat-name">KHÔNG GIẬT (NO RECOIL)</span>
+                <div class="toggle" data-cheat="norecoil"></div>
+            </div>
+            <div class="cheat-item">
+                <span class="cheat-name">AIMLOCK + TỰ ĐỘNG BẮN</span>
+                <div class="toggle" data-cheat="aimbot"></div>
+            </div>
+            <div class="cheat-item">
+                <span class="cheat-name">XUYÊN TƯỜNG (WALLHACK)</span>
+                <div class="toggle" data-cheat="wallhack"></div>
+            </div>
+            <div class="cheat-item">
+                <span class="cheat-name">TĂNG TỐC (SPEED HACK)</span>
+                <div class="toggle" data-cheat="speedhack"></div>
+            </div>
+            <div class="cheat-item">
+                <span class="cheat-name">CHỐNG BAN (ANTIBAN)</span>
+                <div class="toggle" data-cheat="antibun" style="background:#0ff; border-color:#fff;"></div>
+            </div>
+        </div>
+        <div class="status" style="background:#0f0f20;">✅ ĐÃ KÍCH HOẠT | QUANGKHAI 3M4 VIP ✅</div>
+    </div>
+
+    <div class="footer">
+        ⚡ QK3M4 ULTIMATE CHEAT ENGINE ⚡ <br> WEBVIEW PACKET INJECTOR | MITM READY
+    </div>
+</div>
+
+<script>
+    (function() {
+        // --------------------------------------------------------------
+        // HỆ THỐNG KEY
+        // KEY 24H: 99101029888  (mỗi thiết bị 1 lần / hết hạn sau 24h)
+        // KEY VĨNH VIỄN: 919919191919Qk
+        // --------------------------------------------------------------
+        const STORAGE_KEY = "QK3M4_AUTH_DEVICE";
+        const EXPIRY_KEY = "QK3M4_EXPIRY";
+
+        const VALID_PERMANENT_KEY = "919919191919Qk";
+        const VALID_24H_KEY = "99101029888";
+
+        function isDeviceActivated() {
+            let data = localStorage.getItem(STORAGE_KEY);
+            if (!data) return false;
+            try {
+                let parsed = JSON.parse(data);
+                if (parsed.permanent) return true;
+                if (parsed.temp && parsed.expiry) {
+                    let now = Date.now();
+                    if (now < parsed.expiry) return true;
+                    else {
+                        // hết hạn -> xóa
+                        localStorage.removeItem(STORAGE_KEY);
+                        localStorage.removeItem(EXPIRY_KEY);
+                        return false;
+                    }
+                }
+            } catch(e) {}
+            return false;
+        }
+
+        function activatePermanent() {
+            let deviceData = { permanent: true, activatedAt: Date.now() };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(deviceData));
+            return true;
+        }
+
+        function activate24h() {
+            let now = Date.now();
+            let expiry = now + (24 * 60 * 60 * 1000); // 24h
+            let deviceData = { temp: true, expiry: expiry };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(deviceData));
+            localStorage.setItem(EXPIRY_KEY, expiry);
+            return true;
+        }
+
+        function checkAndActivateKey(inputKey) {
+            if (!inputKey || inputKey.trim() === "") return { success: false, msg: "❌ KEY không được để trống!" };
+            let key = inputKey.trim();
+            
+            // KEY vĩnh viễn
+            if (key === VALID_PERMANENT_KEY) {
+                if (isDeviceActivated()) return { success: false, msg: "⚠️ Thiết bị đã được kích hoạt trước đó!" };
+                activatePermanent();
+                return { success: true, msg: "✅ KÍCH HOẠT VĨNH VIỄN THÀNH CÔNG! CHÀO MỪNG MASTER." };
+            }
+            // KEY 24h
+            else if (key === VALID_24H_KEY) {
+                if (isDeviceActivated()) return { success: false, msg: "⚠️ Key 24h chỉ dùng 1 lần mỗi thiết bị!" };
+                activate24h();
+                return { success: true, msg: "⏰ KÍCH HOẠT 24H THÀNH CÔNG! HẾT HẠN SAU 1 NGÀY." };
+            }
+            else {
+                return { success: false, msg: "🚫 KEY SAI HOẶC KHÔNG HỢP LỆ!" };
+            }
+        }
+
+        // render giao diện nếu đã active
+        function renderCheatPanelIfActivated() {
+            if (isDeviceActivated()) {
+                document.getElementById("keySection").style.display = "none";
+                document.getElementById("cheatPanel").style.display = "block";
+                updateToggleStatus();
+            } else {
+                document.getElementById("keySection").style.display = "block";
+                document.getElementById("cheatPanel").style.display = "none";
+            }
+        }
+
+        // CHEAT ENGINE (mô phỏng ghi log và gửi lệnh webview)
+        let cheatState = {
+            norecoil: false,
+            aimbot: false,
+            wallhack: false,
+            speedhack: false,
+            antibun: true      // antiban luôn bật
+        };
+
+        function saveCheatState() {
+            if (isDeviceActivated()) {
+                localStorage.setItem("QK3M4_CHEAT_STATE", JSON.stringify(cheatState));
+                broadcastCheatToGame();
+            }
+        }
+
+        function loadCheatState() {
+            let saved = localStorage.getItem("QK3M4_CHEAT_STATE");
+            if (saved) {
+                try {
+                    let obj = JSON.parse(saved);
+                    cheatState = { ...cheatState, ...obj };
+                } catch(e) {}
+            }
+            updateToggleStatus();
+        }
+
+        function updateToggleStatus() {
+            document.querySelectorAll(".toggle").forEach(toggle => {
+                let cheat = toggle.getAttribute("data-cheat");
+                if (cheatState[cheat]) toggle.classList.add("active");
+                else toggle.classList.remove("active");
+            });
+        }
+
+        function broadcastCheatToGame() {
+            // Gửi dữ liệu cheat xuống WebView (nếu đang chạy trong webclip overlay)
+            let cheatData = {
+                norecoil: cheatState.norecoil,
+                aimbot: cheatState.aimbot,
+                wallhack: cheatState.wallhack,
+                speedhack: cheatState.speedhack,
+                antibun: cheatState.antibun,
+                timestamp: Date.now()
+            };
+            console.log("[QK3M4 ENGINE] ĐÃ GỬI LỆNH:", cheatData);
+            try {
+                // For WebView / custom scheme
+                if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.cheatHandler) {
+                    window.webkit.messageHandlers.cheatHandler.postMessage(cheatData);
+                }
+                // fallback: Lưu vào sessionStorage để script ngoài đọc
+                sessionStorage.setItem("QK3M4_ACTIVE_CHEAT", JSON.stringify(cheatData));
+                // phát sự kiện
+                window.dispatchEvent(new CustomEvent("QK3M4_CHEAT_UPDATE", { detail: cheatData }));
+            } catch(e) {}
+        }
+
+        // EVENT TOGGLE
+        function bindToggles() {
+            document.querySelectorAll(".toggle").forEach(toggle => {
+                toggle.removeEventListener("click", toggleClickHandler);
+                toggle.addEventListener("click", toggleClickHandler);
+            });
+        }
+
+        function toggleClickHandler(e) {
+            if (!isDeviceActivated()) return;
+            let toggle = e.currentTarget;
+            let cheat = toggle.getAttribute("data-cheat");
+            if (cheat && cheatState.hasOwnProperty(cheat)) {
+                cheatState[cheat] = !cheatState[cheat];
+                if (cheat === "antibun" && cheatState[cheat] === false) cheatState[cheat] = true; // không cho tắt antiban
+                saveCheatState();
+                updateToggleStatus();
+                // thông báo toast ảo
+                let statusDiv = document.querySelector("#cheatPanel .status");
+                if (statusDiv) {
+                    let action = cheatState[cheat] ? "BẬT" : "TẮT";
+                    statusDiv.innerHTML = `🔧 ${action} ${cheat.toUpperCase()} | QK3M4 ACTIVE 🔧`;
+                    setTimeout(() => {
+                        if (isDeviceActivated()) statusDiv.innerHTML = "✅ ĐÃ KÍCH HOẠT | QUANGKHAI 3M4 VIP ✅";
+                    }, 1500);
+                }
+            }
+        }
+
+        // XỬ LÝ NHẬP KEY
+        document.getElementById("submitKey").addEventListener("click", function() {
+            let inputField = document.getElementById("licenseKey");
+            let rawKey = inputField.value;
+            let result = checkAndActivateKey(rawKey);
+            let statusDiv = document.getElementById("statusMsg");
+            statusDiv.innerHTML = result.msg;
+            statusDiv.style.color = result.success ? "#0f0" : "#f66";
+            if (result.success) {
+                setTimeout(() => {
+                    renderCheatPanelIfActivated();
+                    if (isDeviceActivated()) {
+                        loadCheatState();
+                        bindToggles();
+                    }
+                }, 800);
+            } else {
+                inputField.value = "";
+                inputField.focus();
+            }
+        });
+
+        // init
+        renderCheatPanelIfActivated();
+        if (isDeviceActivated()) {
+            loadCheatState();
+            bindToggles();
+            broadcastCheatToGame();
+        }
+
+        // Tự động đồng bộ mỗi 5s
+        setInterval(() => {
+            if (isDeviceActivated()) {
+                broadcastCheatToGame();
+            }
+        }, 5000);
+    })();
+</script>
+</body>
+</html>
